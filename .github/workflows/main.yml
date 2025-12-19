@@ -1,0 +1,33 @@
+# File: .github/workflows/main.yml
+name: Automated QA Suite
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+
+    - name: Install Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Run Tests
+      run: |
+        pytest tests/ -v --html=report.html
+    
+    - name: Upload Test Report
+      uses: actions/upload-artifact@v3
+      if: always()
+      with:
+        name: test-report
+        path: report.html
