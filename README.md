@@ -54,11 +54,7 @@ graph TB
     B --> L[Test Reports]
     B --> M[Screenshots on Failure]
     
-    style A fill:#e1f5ff
-    style B fill:#fff4e1
-    style C fill:#e8f5e9
-    style D fill:#f3e5f5
-    style E fill:#fce4ec
+
 ```
 
 ### Page Object Model Structure
@@ -543,13 +539,11 @@ def pytest_runtest_makereport(item, call):
 
 ### Screenshot Examples
 
-**Login Failure Screenshot:**
 
-![Login Failure](screenshots/test_login_failure_example.png)
 
 **Checkout Error Screenshot:**
 
-![Checkout Error](screenshots/test_checkout_error_example.png)
+![Checkout Error](screenshots\test_intentional_failure_for_screenshot_demo_2025-12-20_01-06-13.png)
 
 ### Manual Screenshot Capture
 
@@ -591,27 +585,6 @@ def test_manual_screenshot(self, driver):
 3. **Parallel execution**: Run tests in parallel for faster feedback
 4. **Headless mode**: Use headless browser for CI/CD pipelines
 
-## Contributing
-
-### Contribution Guidelines
-
-We welcome contributions to improve the framework. Please follow these guidelines:
-
-1. **Fork the repository**
-2. **Create a feature branch**: `git checkout -b feature/your-feature-name`
-3. **Make your changes** with clear, commented code
-4. **Write tests** for new functionality
-5. **Update documentation** as needed
-6. **Run all tests** to ensure nothing breaks
-7. **Submit a pull request** with a clear description of changes
-
-### Code Standards
-
-- Follow PEP 8 style guidelines for Python code
-- Add docstrings to all classes and methods
-- Use type hints where appropriate
-- Keep line length under 100 characters
-- Write meaningful commit messages
 
 ### Testing Changes
 
@@ -634,10 +607,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-**Project Maintainer:** Automation Team
-
-**Last Updated:** December 20, 2025
-
-**Framework Version:** 1.0.0
 
 **Documentation Version:** 1.0.0
