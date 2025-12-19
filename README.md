@@ -302,7 +302,6 @@ def pytest_runtest_makereport(item, call):
 
 ![Failure Screenshot](screenshots/test_intentional_failure_for_screenshot_demo_2025-12-20_01-06-13.png)
 
-This screenshot shows the browser state at the moment of test failure, making debugging easier.
 
 ## License 📄
 
